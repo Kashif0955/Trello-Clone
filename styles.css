@@ -3,7 +3,6 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-  
 }
 
 header {
@@ -15,10 +14,10 @@ header {
 
 main {
     display: flex;
+    flex-wrap: wrap; 
     gap: 20px;
     padding: 20px;
     justify-content: center;
-    align-items: center;
 }
 
 .board {
@@ -26,6 +25,8 @@ main {
     border-radius: 4px;
     padding: 10px;
     width: 280px;
+    max-width: 100%; 
+    box-sizing: border-box; 
 }
 
 .column {
@@ -34,10 +35,12 @@ main {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: 100%; 
 }
 
 form {
     display: flex;
+    flex-wrap: wrap; 
     gap: 10px;
 }
 
@@ -61,14 +64,6 @@ button:hover {
     background-color: #5aac44;
 }
 
-p.ticket {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    margin-bottom: 5px;
-    cursor: move;
-}
 .ticket {
     display: flex;
     align-items: center;
@@ -78,13 +73,16 @@ p.ticket {
     border-radius: 4px;
     padding: 8px;
     margin-bottom: 5px;
-    margin-top: 10px;
-   min-height: 10px;
 }
 
 .delete-icon {
     cursor: pointer;
-    color: #e74c3c; /* Red color for delete icon */
+    color: #e74c3c; 
     font-size: 16px;
 }
 
+@media only screen and (max-width: 600px) {
+    .board {
+        width: 100%; 
+    }
+}
